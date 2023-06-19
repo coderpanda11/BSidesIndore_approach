@@ -1,0 +1,10 @@
+For this challenge at first I downloaded the file and extracted it. 
+
+There I got a system file and I opened it in windows event viewer, to check on the events that has occured on the system including the logins.
+
+I already knew that 4624 is the id for successful login
+and 4625 is the id for unsuccessful login
+
+Then with the help of sorting and grouping I got the number of failed logins(6) and the last successful login date and time. 
+
+And finally converted my time in UTC.

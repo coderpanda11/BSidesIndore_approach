@@ -1,0 +1,7 @@
+For this challenge I used little bit OSINT and checked/read different writeups to understand the challenge and do it. 
+
+But while searching for the writeups I got a writeup which had the same question and code was almost the same. So I used that and took out the flag.
+
+https://github.com/Crusaders-of-Rust/corCTF-2022-public-challenge-archive/tree/master/crypto/exchanged/task
+
+(The writeup's site)

@@ -1,0 +1,3 @@
+For USB challenge I used "volatlity" tool to analyse the memdump.raw file 
+
+python2 ~/CTFS/bsctf/volatility/vol.py -f memdump.raw --profile=Win7SP0x64 shellbags

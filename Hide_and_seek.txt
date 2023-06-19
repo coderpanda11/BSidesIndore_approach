@@ -1,0 +1,3 @@
+Hide and seek
+
+For the first part of Hide and Seek go here and choose hiden pixel https://fotoforensics.com/analysis.php?id=0839fc8d651f1b8592aeb2a01abcb9953612157e.847381 and for the second part, zsteg file and decode the text from b64 
